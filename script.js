@@ -20,7 +20,6 @@ const web = document.getElementById("web");
 const twitter = document.getElementById("twitter");
 const github = document.getElementById("github");
 
-
 result.style.display = "none";
 
 btn.addEventListener("click", function () {
@@ -31,10 +30,11 @@ btn.addEventListener("click", function () {
         .then(res => {
             if (res.ok) {
                 res.json().then(data => {
-                    //
+                    //Displaying the content when calling fetch
                     result.style.display = "block";
                     error.style.display = "none";
-                    //
+
+                    //Display of the content of the different data of the API
                     logo.src = data.avatar_url;
                     pseudo.textContent = data.login;
                     tw.textContent = "@" + data.twitter_username
@@ -48,17 +48,17 @@ btn.addEventListener("click", function () {
                     twitter.textContent = data.twitter_username;
                     github.textContent = "@" + data.company;
 
+                    //Date management
                     let day = new Date(data.created_at);
                     let localDate = day.toLocaleString('fr-FR', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric',
                     })
-
                     date.textContent = "Joined" + " " + localDate;
-
+                    
+                    //Error condition
                     dataD.forEach(elt => {
-                        //Changement de la classe si available;
                         if (elt.textContent.length === 0) {
                             elt.textContent = "Not available";
                             elt.style.color = "#A4B4CC";
