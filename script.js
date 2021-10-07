@@ -45,7 +45,7 @@ btn.addEventListener("click", function () {
                     loc.textContent = data.location;
                     web.textContent = data.blog;
                     web.href = `${data.blog}`;
-                    twitter.textContent = data.twitter_username;
+                    twitter.textContent = "@" + data.twitter_username;
                     github.textContent = "@" + data.company;
 
                     //Date management
@@ -56,7 +56,7 @@ btn.addEventListener("click", function () {
                         day: 'numeric',
                     })
                     date.textContent = "Joined" + " " + localDate;
-                    
+
                     //Error condition
                     dataD.forEach(elt => {
                         if (elt.textContent.length === 0) {
@@ -70,6 +70,10 @@ btn.addEventListener("click", function () {
                             })
                         }
                     });
+
+                    if (desc.textContent.length === 0) {
+                        desc.textContent = "This profile has no bio";
+                    }
                 })
             } else {
                 error.textContent = "No results";
@@ -78,6 +82,27 @@ btn.addEventListener("click", function () {
             }
         })
 });
+
+//DarkMode
+const darkMode = document.getElementById('dark-mode');
+const darkSpan = document.getElementById('dark-span');
+const darkLogo = document.getElementById('dark-logo');
+
+darkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    if (document.body.classList.contains("dark")) {
+        darkSpan.textContent = "light";
+        darkLogo.classList.remove("fa-moon");
+        darkLogo.classList.add("fa-sun");
+
+    } else {
+        darkSpan.textContent = "dark";
+        darkLogo.classList.remove("fa-sun");
+        darkLogo.classList.add("fa-moon");
+    }
+})
+
 
 
 
