@@ -26,6 +26,10 @@ body {
             color: #4b6a9b;
             cursor: pointer;
 
+            &:hover {
+                color: #222731;
+            }
+
             span {
                 text-transform: uppercase;
                 font-size: 13px;
@@ -448,6 +452,7 @@ body {
 .dark #pseudo,
 .dark #date,
 .dark #desc,
+.dark #desc-header,
 .dark .search input,
 .dark .result__main-count div h4,
 .dark .result__main-count div span,
