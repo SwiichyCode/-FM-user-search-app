@@ -108,7 +108,6 @@ body {
 }
 .container .search input {
   width: 100%;
-  max-width: 184px;
   height: 25px;
   border: none;
   outline: none;
