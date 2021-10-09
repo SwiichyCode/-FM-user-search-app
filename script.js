@@ -12,6 +12,7 @@ const date = document.getElementById("date");
 const pseudo = document.getElementById("pseudo");
 const tw = document.getElementById("tw");
 const desc = document.getElementById("desc");
+const descHeader = document.getElementById("desc-header");
 const repo = document.getElementById("repo");
 const followers = document.getElementById("followers");
 const following = document.getElementById("following");
@@ -39,6 +40,7 @@ btn.addEventListener("click", function () {
                     pseudo.textContent = data.login;
                     tw.textContent = "@" + data.twitter_username
                     desc.textContent = data.bio;
+                    descHeader.textContent = data.bio;
                     repo.textContent = data.public_repos;
                     followers.textContent = data.followers;
                     following.textContent = data.following;

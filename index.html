@@ -11,91 +11,89 @@
 </head>
 
 <body>
+    <!--CONTAINER-->
     <div class="container">
+        <!--NAV-->
         <div class="nav">
-            <div class="nav__logo">
-                <span>devfinder</span>
-            </div>
+            <h1 class="nav__logo">devfinder</h1>
             <div class="nav__toggle" id="dark-mode">
                 <span id="dark-span">dark</span>
                 <i id="dark-logo" class="fas fa-moon"></i>
             </div>
         </div>
-
+        <!--SEARCH -->
         <div class="search">
             <img src="/assets/icon-search.svg" />
             <input id="result" type="text" placeholder="Search GitHub username…" class="search__git">
             <span id="error"></span>
             <button id="search" type="button">search</button>
         </div>
-
+        <!--RESULT-->
         <div class="result">
             <div class="result__header">
                 <div class="result__header-logo">
                     <img class="dataD" id="logo" src="" />
                 </div>
-                <div class="result__header-description">
-                    <div class="result__header-description-header">
-                        <h3 class="dataD" id="pseudo"></h3>
-                        <span class="dataD" id="date"></span>
-                    </div>
-                    <div class="result__header-description-twitter">
-                        <span class="dataD" id="tw"></span>
-                    </div>
-                    <div class="result__header-description-info">
-                        <p class="dataD" id="desc"></p>
-                    </div>
-                    <div class="result__header-description-follow">
-                        <div class="repo">
-                            <h4>Repos</h4>
-                            <span class="dataD" id="repo"></span>
+                <div class="result__header-data">
+                    <div>
+                        <div>
+                            <h3 class="dataD" id="pseudo"></h3>
+                            <span class="dataD tw-header" id="tw"></span>
                         </div>
-                        <div class="followers">
-                            <h4>Followers</h4>
-                            <span class="dataD" id="followers"></span>
-                        </div>
-                        <div class="following">
-                            <h4>Following</h4>
-                            <span class="dataD" id="following"></span>
-                        </div>
+                        <span class="dataD date-header" id="date">Joined 25 Jan 2011</span>
                     </div>
-                    <div class="result__header-description-reseaux">
-                        <div class="reseaux-content">
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fas fa-map-marker-alt iconD"></i>
-                                    </div>
-                                    <span class="dataD dataY" id="loc"></span>
-                                </li>
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fas fa-link iconD"></i>
-                                    </div>
-                                    <a class="dataD dataY" id="web"></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="reseaux-content">
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fab fa-twitter iconD"></i>
-                                    </div>
-                                    <span class="dataD dataY" id="twitter"></span>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fas fa-building iconD"></i>
-                                    </div>
-                                    <span class="dataD dataY" id="github"></span>
-                                </li>
-                            </ul>
-                        </div>
+                    <p class="dataD" id="desc-header"></p>
+                </div>
+            </div>
+            <div class="result__main">
+                <div class="result__main-bio">
+                    <p class="dataD" id="desc"></p>
+                </div>
+                <div class="result__main-count">
+                    <div class="repo">
+                        <h4>Repos</h4>
+                        <span class="dataD" id="repo"></span>
                     </div>
+                    <div class="followers">
+                        <h4>Followers</h4>
+                        <span class="dataD" id="followers"></span>
+                    </div>
+                    <div class="following">
+                        <h4>Following</h4>
+                        <span class="dataD" id="following"></span>
+                    </div>
+                </div>
+                <div class="result__main-social">
+                    <ul>
+                        <div>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt iconD"></i>
+                                </div>
+                                <span class="dataD dataY" id="loc"></span>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-link iconD"></i>
+                                </div>
+                                <a class="dataD dataY" id="web"></a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <div class="icon">
+                                    <i class="fab fa-twitter iconD"></i>
+                                </div>
+                                <span class="dataD dataY" id="twitter"></span>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-building iconD"></i>
+                                </div>
+                                <span class="dataD dataY" id="github"></span>
+                            </li>
+                        </div>
+                    </ul>
                 </div>
             </div>
         </div>
